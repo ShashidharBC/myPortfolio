@@ -5,9 +5,11 @@ import CANCEL_ICON from "../assests/cancel_icon.jpg";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleMenu = () => {
-    return <></>;
+    setIsOpen(!isOpen);
   };
+
   return (
     <>
       <nav id="desktop-nav">
@@ -44,29 +46,34 @@ const NavBar = () => {
             alt="Logo"
             width={35}
             height={35}
+            onClick={toggleMenu}
           />
-          <div className="menu-links">
-            <li>
-              <a href="/" onClick={toggleMenu}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/" onClick={toggleMenu}>
-                Work
-              </a>
-            </li>
-            <li>
-              <a href="/" onClick={toggleMenu}>
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="/" onClick={toggleMenu}>
-                Contact Me
-              </a>
-            </li>
-          </div>
+          {isOpen && (
+            <div className="menu-links">
+              <ul>
+                <li>
+                  <a href="/" onClick={toggleMenu}>
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="/" onClick={toggleMenu}>
+                    Work
+                  </a>
+                </li>
+                <li>
+                  <a href="/" onClick={toggleMenu}>
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a href="/" onClick={toggleMenu}>
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </nav>
     </>
