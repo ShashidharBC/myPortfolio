@@ -7,13 +7,15 @@ import "./styles.css";
 import About from "../About/About";
 import Experience from "../Experience/Experience";
 import Contact from "../Contact/Contact";
+import Projects from "../Projects/Projects";
+import TypeWriter from "./TypeWriter";
 
 const Home = () => {
   const handleDownloadCV = () => {
     window.open(MY_RESUME);
   };
   const handleContactInfo = () => {
-    window.location.href = "./#contact";
+    window.location.href = "#contact";
   };
 
   const renderBtnContainer = () => {
@@ -44,8 +46,10 @@ const Home = () => {
           width={40}
           height={40}
           onClick={() =>
-            (window.location.href =
-              "https://www.linkedin.com/in/shashidhara-b-challamarada-656117218/")
+            window.open(
+              "https://www.linkedin.com/in/shashidhara-b-challamarada-656117218/",
+              "_blank"
+            )
           }
         />
         <img
@@ -55,7 +59,7 @@ const Home = () => {
           width={40}
           height={40}
           onClick={() =>
-            (window.location.href = "https://github.com/ShashidharBC")
+            window.open("https://github.com/ShashidharBC", "_blank")
           }
         />
       </div>
@@ -63,18 +67,18 @@ const Home = () => {
   };
   const renderIntroduction = () => {
     return (
-      <section className="flex items-center justify-center width-[5rem] mt-[4%] gap-14">
-        <div className="shadow-sm rounded-3xl shadow-black">
+      <section className="flex items-center justify-center width-[5rem] mt-[4%] gap-20">
+        <div className="shadow-black">
           <img src={PROFILE_PIC} alt="profile-pic" width={350} height={350} />
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-8 items-center justify-center">
+          <div className="flex flex-col gap-4">
             <span className="textStyle text-md font-light">Hello, I am</span>
             <span className="textStyle text-3xl font-semibold">
               Shashidhara B Challamarada
             </span>
-            <span className="textStyle text-xl font-medium">
-              Front End Developer
+            <span className="textStyle text-2xl font-semibold text-[#3c5b6f]">
+              <TypeWriter />
             </span>
           </div>
           {renderBtnContainer()}
@@ -83,36 +87,8 @@ const Home = () => {
       </section>
     );
   };
-  const renderAboutSection = () => {
-    return (
-      <>
-        <About />
-      </>
-    );
-  };
-  const renderExperienceSection = () => {
-    return (
-      <>
-        <Experience />
-      </>
-    );
-  };
-  const renderContactSection = () => {
-    return (
-      <>
-        <Contact />
-      </>
-    );
-  };
 
-  return (
-    <section className="flex flex-col px-6 py-14 gap-40">
-      {renderIntroduction()}
-      {renderAboutSection()}
-      {renderExperienceSection()}
-      {renderContactSection()}
-    </section>
-  );
+  return <section className="">{renderIntroduction()}</section>;
 };
 
 export default Home;

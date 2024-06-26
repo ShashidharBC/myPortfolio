@@ -24,16 +24,16 @@ const NavBar = () => {
             }}
           >
             <li>
-              <a href="/">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="/">Work</a>
+              <a href="#experience">Work</a>
             </li>
             <li>
-              <a href="/">Projects</a>
+              <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="/">Contact Me</a>
+              <a href="#contact">Contact Me</a>
             </li>
           </ul>
         </div>
@@ -52,23 +52,23 @@ const NavBar = () => {
             <div className="menu-links">
               <ul>
                 <li>
-                  <a href="/" onClick={toggleMenu}>
+                  <a href="#about" onClick={toggleMenu}>
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="/" onClick={toggleMenu}>
+                  <a href="#experience" onClick={toggleMenu}>
                     Work
                   </a>
                 </li>
                 <li>
-                  <a href="/" onClick={toggleMenu}>
+                  <a href="#projects" onClick={toggleMenu}>
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="/" onClick={toggleMenu}>
-                    Contact
+                  <a href="#contact" onClick={toggleMenu}>
+                    Contact Me
                   </a>
                 </li>
               </ul>

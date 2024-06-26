@@ -63,11 +63,15 @@ const Experience = () => {
     <section className="flex flex-col items-center justify-center gap-16">
       <div className="flex flex-col textStyle gap-2">
         <span className="text-md">Explore My</span>
-        <span className="text-5xl font-semibold">Experience</span>
+        <span className="text-5xl font-semibold text-[#3c5b6f]">
+          Experience
+        </span>
       </div>
       <div className="flex w-[90%] textStyle items-center justify-between">
         <div className="flex flex-col w-[45%] h-[18rem] border border-black rounded-lg justify-start gap-6 p-4 shadow-lg">
-          <span className="text-lg font-medium">Mobile App Developement</span>
+          <span className="text-lg font-semibold text-[#3c5b6f]">
+            Mobile App Developement
+          </span>
           <div className="flex flex-wrap gap-10">
             {mobileAppDevData &&
               mobileAppDevData.map((item, index) => (
@@ -90,8 +94,10 @@ const Experience = () => {
               ))}
           </div>
         </div>
-        <div className="flex flex-col w-[45%] h-[18rem] border border-black rounded-lg justify-center gap-6 p-4 shadow-lg">
-          <span className="text-lg font-medium">FE & BE Developement</span>
+        <div className="flex flex-col w-[45%] h-[18rem] border border-black rounded-lg justify-start gap-6 p-4 shadow-lg">
+          <span className="text-lg font-semibold text-[#3c5b6f]">
+            FE & BE Developement
+          </span>
           <div className="flex flex-wrap gap-10">
             {feAndBeDevData &&
               feAndBeDevData.map((item, index) => (

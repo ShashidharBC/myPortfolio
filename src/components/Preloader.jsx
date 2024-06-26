@@ -8,7 +8,7 @@ function Preloader(props) {
       id={props?.load ? "preloader" : "preloader-none"}
       className="absolute top-[40%] left-[40%]"
     >
-      <Loader type="Plane" color="#000" height={500} width={500} />
+      <Loader type="Plane" color="#3c5b6f" height={500} width={500} />
     </div>
   );
 }

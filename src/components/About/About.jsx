@@ -1,5 +1,5 @@
 import React from "react";
-import PROFILE_PIC from "../../assests/My_pic-circle-2.png";
+import PROFILE_PIC from "../../assests/about.gif";
 import BADGE_ICON from "../../assests/badge.svg";
 import EDUCATION_ICON from "../../assests/education.svg";
 
@@ -10,13 +10,13 @@ const About = () => {
     <section className="flex flex-col items-center justify-center gap-16">
       <div className="flex flex-col textStyle gap-2">
         <span className="text-md">Get To Know More</span>
-        <span className="text-5xl font-semibold">About Me</span>
+        <span className="text-5xl font-semibold text-[#3c5b6f]">About Me</span>
       </div>
-      <div className="textStyle w-[50rem] flex justify-center gap-8">
+      <div className="textStyle w-[75%] flex justify-center gap-20 ml-[15%]">
         <div>
-          <img src={PROFILE_PIC} alt="profile-pic" />
+          <img className="rounded-full" src={PROFILE_PIC} alt="profile-pic" />
         </div>
-        <div className="flex flex-col w-[90%] gap-4 items-start">
+        <div className="flex flex-col w-[80%] gap-4 items-start justify-evenly">
           <div className="flex gap-8">
             <div className="flex flex-col w-[14rem] border border-black bg-white rounded-3xl items-center justify-center p-4 shadow-lg">
               <img src={BADGE_ICON} alt="badge-icon" width={40} height={40} />
@@ -39,7 +39,7 @@ const About = () => {
               <span className="text-sm font-normal">{`6.75 (CGPA)`}</span>
             </div>
           </div>
-          <div className="flex w-full min-h-2">
+          <div className="flex w-full min-h-2 textStyle">
             <span className="text-left">
               Experienced Javascript developer with 2+ years of experience in
               the industry, which includes extensive experience as a React
