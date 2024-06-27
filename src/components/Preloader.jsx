@@ -6,7 +6,7 @@ function Preloader(props) {
   return (
     <div
       id={props?.load ? "preloader" : "preloader-none"}
-      className="absolute top-[40%] left-[40%]"
+      className="absolute top-[26%] left-[38%]"
     >
       <Loader type="Plane" color="#3c5b6f" height={500} width={500} />
     </div>
