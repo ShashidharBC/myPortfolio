@@ -22,7 +22,9 @@ const About = () => {
               <img src={BADGE_ICON} alt="badge-icon" width={40} height={40} />
               <span className="text-sm font-bold">Experience</span>
               <span className="text-sm font-medium">2+ Years</span>
-              <span className="text-sm font-normal">Frontend Developer</span>
+              <span className="text-sm font-normal">
+                Mobile App & Web App Frontend Developer
+              </span>
             </div>
             <div className="flex flex-col w-[14rem] border border-black bg-white rounded-3xl items-center justify-center p-4 shadow-lg">
               <img
@@ -35,6 +37,9 @@ const About = () => {
               <span className="text-sm font-bold">Education</span>
               <span className="text-sm font-medium">
                 Bachelor of Engineering
+              </span>
+              <span className="text-[0.6rem] font-medium">
+                {`(Information Science & Engineering)`}
               </span>
               <span className="text-sm font-normal">{`6.75 (CGPA)`}</span>
             </div>

@@ -73,11 +73,13 @@ const Projects = () => {
   const renderProjectsList = () => {
     return (
       <div className="flex items-center justify-center gap-10">
-        <div className="flex flex-col w-[20%] min-h-[150px] border border-black bg-gradient-to-b from-[#15385F] from-80% to-[#fff] to-20% rounded-xl shadow-lg items-center justify-center p-4 gap-6">
+        <div className="flex flex-col w-[20%] border border-black bg-gradient-to-b from-[#15385F] from-85% to-[#fff] to-15% rounded-xl shadow-lg items-center justify-center p-4 gap-6">
           <div className="pl-[12%]">
-            <Carousel data={TRAG_CONNECT_IMAGES} cWidth={"80%"} />
+            <Carousel data={TRAG_CONNECT_IMAGES} cWidth={"100%"} />
           </div>
-          <span className="text-xl font-semibold text-white">Trag-Connect</span>
+          <span className="text-xl font-semibold text-white mb-6">
+            Trag-Connect
+          </span>
           <img
             src={PLAYSTORE_ICON}
             alt="playstore-icon"
@@ -92,11 +94,11 @@ const Projects = () => {
             }
           />
         </div>
-        <div className="flex flex-col w-[20%] min-h-[150px] border border-black bg-gradient-to-b from-[#C2A252] from-80% to-[#fff] to-20% rounded-xl shadow-lg items-center justify-center p-4 gap-6">
+        <div className="flex flex-col w-[20%] border border-black bg-gradient-to-b from-[#C2A252] from-85% to-[#fff] to-15% rounded-xl shadow-lg items-center justify-center p-4 gap-6">
           <div className="pl-[12%]">
-            <Carousel data={TRIBE_CARNIVAL_IMAGES} cWidth={"80%"} />
+            <Carousel data={TRIBE_CARNIVAL_IMAGES} cWidth={"100%"} />
           </div>
-          <span className="text-xl font-semibold text-white">
+          <span className="text-xl font-semibold text-white mb-6">
             Tribe-Carnival
           </span>
           <img
@@ -113,11 +115,13 @@ const Projects = () => {
             }
           />
         </div>
-        <div className="flex flex-col w-[20%] min-h-[150px] border border-black bg-gradient-to-b from-[#15385F] from-70% to-[#fff] to-30% rounded-xl shadow-lg items-center justify-center p-4 gap-4">
+        <div className="flex flex-col w-[30%] border border-black bg-gradient-to-b from-[#15385F] from-80% to-[#fff] to-20% rounded-xl shadow-lg items-center justify-center p-4 gap-4">
           <div>
             <Carousel data={AUSA_HEALTH_IMAGES} cWidth={"100%"} />
           </div>
-          <span className="text-xl font-semibold text-white">Ausa Health</span>
+          <span className="text-xl font-semibold text-white mb-4">
+            Ausa Health
+          </span>
           <img
             src={LINK_ICON}
             alt="playstore-icon"
@@ -134,7 +138,9 @@ const Projects = () => {
     <section className="flex textStyle flex-col items-center justify-center gap-10">
       <div className="flex flex-col textStyle gap-2">
         <span className="text-md">Browse My Recent</span>
-        <span className="text-5xl font-semibold text-[#3c5b6f]">Projects</span>
+        <span className="text-5xl font-semibold text-[rgb(60,91,111)]">
+          Projects
+        </span>
       </div>
       <div className="w-full items-center justify-center">
         {renderProjectsList()}
