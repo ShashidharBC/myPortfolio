@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-white text-white p-4 text-center">
       <div className="mx-auto">
         <span className="textStyle text-[#3c5b6f] text-md font-medium">
-          © 2024 Shashidhar BC. All rights reserved.
+          © {new Date().getFullYear()} Shashidhar BC. All rights reserved.
         </span>
       </div>
     </footer>
