@@ -17,7 +17,6 @@ function App() {
     const timer = setTimeout(() => {
       updateLoad(false);
     }, 2000);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -28,7 +27,13 @@ function App() {
       ) : (
         <div className="App" id={load ? "no-scroll" : "scroll"}>
           <Navbar />
-          <div className="flex flex-col px-6 py-14 gap-40">
+          {/* 
+            Responsive section spacing:
+            - px-4 sm:px-6 md:px-10 → horizontal padding scales up
+            - gap-20 sm:gap-28 md:gap-40 → vertical gap scales up
+            - py-10 sm:py-14 → vertical padding
+          */}
+          <div className="flex flex-col px-4 py-10 gap-20 sm:px-6 sm:py-14 sm:gap-28 md:px-10 md:gap-36">
             <section id="home">
               <Home />
             </section>

@@ -4,10 +4,6 @@ import LINKEDIN from "../../assests/linkedin.png";
 import GITHUB_ICON from "../../assests/github.png";
 import MY_RESUME from "../../assests/ShashidharBC_CV.pdf";
 import "./styles.css";
-import About from "../About/About";
-import Experience from "../Experience/Experience";
-import Contact from "../Contact/Contact";
-import Projects from "../Projects/Projects";
 import TypeWriter from "./TypeWriter";
 
 const Home = () => {
@@ -20,7 +16,7 @@ const Home = () => {
 
   const renderBtnContainer = () => {
     return (
-      <div className="flex gap-3">
+      <div className="home-btn-container">
         <button
           className="w-[9rem] bg-[#fff] border border-[#1A2130] hover:bg-[#1A2130] hover:text-white text-lg font-semibold text-center text-black p-3 rounded-full"
           onClick={handleDownloadCV}
@@ -28,7 +24,7 @@ const Home = () => {
           Download CV
         </button>
         <button
-          className="w-[9rem] bg-[#1A2130] hover:bg-[#000]  text-lg font-semibold text-center text-white p-3 rounded-full"
+          className="w-[9rem] bg-[#1A2130] hover:bg-[#000] text-lg font-semibold text-center text-white p-3 rounded-full"
           onClick={handleContactInfo}
         >
           Contact Info
@@ -36,9 +32,10 @@ const Home = () => {
       </div>
     );
   };
+
   const renderSocialsContainer = () => {
     return (
-      <div className="flex gap-4">
+      <div className="home-socials-container">
         <img
           src={LINKEDIN}
           alt="linked-icon"
@@ -48,7 +45,7 @@ const Home = () => {
           onClick={() =>
             window.open(
               "https://www.linkedin.com/in/shashidhara-b-challamarada-656117218/",
-              "_blank"
+              "_blank",
             )
           }
         />
@@ -65,13 +62,18 @@ const Home = () => {
       </div>
     );
   };
+
   const renderIntroduction = () => {
     return (
-      <section className="flex items-center justify-center width-[5rem] mt-[4%] gap-20">
-        <div className="shadow-black">
-          <img src={PROFILE_PIC} alt="profile-pic" width={350} height={350} />
+      <section className="home-intro-section">
+        <div>
+          <img
+            src={PROFILE_PIC}
+            alt="profile-pic"
+            className="home-profile-img"
+          />
         </div>
-        <div className="flex flex-col gap-8 items-center justify-center">
+        <div className="home-intro-content">
           <div className="flex flex-col gap-4">
             <span className="textStyle text-md font-light">Hello, I am</span>
             <span className="textStyle text-3xl font-semibold">
@@ -88,7 +90,7 @@ const Home = () => {
     );
   };
 
-  return <section className="">{renderIntroduction()}</section>;
+  return <section>{renderIntroduction()}</section>;
 };
 
 export default Home;

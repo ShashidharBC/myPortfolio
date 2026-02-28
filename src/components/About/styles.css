@@ -4,3 +4,112 @@
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
+
+.about-heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* Desktop: gif left, info right, centered as a unit */
+.about-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-img-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-profile-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+.about-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+}
+
+.about-cards-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  width: 13rem;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.about-bio {
+  display: flex;
+  width: 100%;
+  text-align: left;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .about-content-wrapper {
+    width: 90%;
+    gap: 2.5rem;
+  }
+
+  .about-profile-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-card {
+    width: 12rem;
+  }
+}
+
+/* Mobile — stack vertically */
+@media screen and (max-width: 768px) {
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    gap: 2rem;
+  }
+
+  .about-info-section {
+    width: 100%;
+    align-items: center;
+  }
+
+  .about-cards-row {
+    justify-content: center;
+  }
+
+  .about-bio {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-profile-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}

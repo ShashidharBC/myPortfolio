@@ -4,3 +4,77 @@
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
+
+/* Home intro section */
+.home-intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4%;
+  gap: 5rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.home-profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.home-intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-btn-container {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-socials-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .home-intro-section {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 6%;
+  }
+
+  .home-profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home-intro-content .textStyle.text-3xl {
+    font-size: 1.4rem !important;
+  }
+
+  .home-intro-content .textStyle.text-2xl {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-profile-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .home-btn-container button {
+    width: 8rem !important;
+    font-size: 0.9rem !important;
+    padding: 0.6rem !important;
+  }
+}

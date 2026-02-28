@@ -9,7 +9,7 @@ import TWITTER_ICON from "../../assests/twitter.png";
 const Contact = () => {
   const renderSocialsContainer = () => {
     return (
-      <div className="flex gap-4 items-center">
+      <div className="contact-socials-box">
         <img
           src={LINKEDIN}
           alt="linked-icon"
@@ -19,7 +19,7 @@ const Contact = () => {
           onClick={() =>
             window.open(
               "https://www.linkedin.com/in/shashidhara-b-challamarada-656117218/",
-              "_blank"
+              "_blank",
             )
           }
         />
@@ -59,21 +59,18 @@ const Contact = () => {
     <section className="flex flex-col items-center justify-center gap-10 pb-[4%]">
       <div className="flex flex-col textStyle gap-2">
         <span className="text-md">Get In Touch</span>
-        <span className="text-5xl font-semibold text-[#3c5b6f]">
+        <span className="contact-heading text-5xl font-semibold text-[#3c5b6f]">
           Contact Me
         </span>
       </div>
-      <div className="flex w-[20%] min-h-[60px] border border-black rounded-2xl justify-center shadow-md">
-        {renderSocialsContainer()}
-      </div>
+      {renderSocialsContainer()}
       <div className="textStyle flex flex-col rounded-xl gap-2">
         <span className="text-md">Or</span>
-        <span className="text-5xl font-semibold text-[#3c5b6f]">
+        <span className="contact-heading text-5xl font-semibold text-[#3c5b6f]">
           Message Me
         </span>
       </div>
-
-      <div>
+      <div className="contact-form-wrapper">
         <ContactForm />
       </div>
     </section>
