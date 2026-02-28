@@ -47,54 +47,66 @@ const Projects = () => {
       <div className="projects-grid">
         {/* Trag Connect */}
         <div className="project-card project-card--dark">
-          <div className="project-carousel-wrapper">
-            <Carousel data={TRAG_CONNECT_IMAGES} cWidth={"100%"} />
+          <div className="project-card-top">
+            <div className="project-carousel-wrapper">
+              <Carousel data={TRAG_CONNECT_IMAGES} cWidth={"100%"} />
+            </div>
+            <span className="project-title">Trag-Connect</span>
           </div>
-          <span className="project-title">Trag-Connect</span>
-          <img
-            src={PLAYSTORE_ICON}
-            alt="playstore-icon"
-            className="project-store-icon hover:cursor-pointer hover:opacity-40"
-            onClick={() =>
-              window.open(
-                "https://play.google.com/store/apps/details?id=io.vlinder.vtrag&hl=en&pli=1",
-                "_blank",
-              )
-            }
-          />
+          <div className="project-card-bottom">
+            <img
+              src={PLAYSTORE_ICON}
+              alt="playstore-icon"
+              className="project-store-icon hover:cursor-pointer hover:opacity-40"
+              onClick={() =>
+                window.open(
+                  "https://play.google.com/store/apps/details?id=io.vlinder.vtrag&hl=en&pli=1",
+                  "_blank",
+                )
+              }
+            />
+          </div>
         </div>
 
         {/* Tribe Carnival */}
         <div className="project-card project-card--gold">
-          <div className="project-carousel-wrapper">
-            <Carousel data={TRIBE_CARNIVAL_IMAGES} cWidth={"100%"} />
+          <div className="project-card-top">
+            <div className="project-carousel-wrapper">
+              <Carousel data={TRIBE_CARNIVAL_IMAGES} cWidth={"100%"} />
+            </div>
+            <span className="project-title">Tribe-Carnival</span>
           </div>
-          <span className="project-title">Tribe-Carnival</span>
-          <img
-            src={PLAYSTORE_ICON}
-            alt="playstore-icon"
-            className="project-store-icon hover:cursor-pointer hover:opacity-40"
-            onClick={() =>
-              window.open(
-                "https://play.google.com/store/apps/details?id=com.masqueraderxperience&hl=en_IN&gl=US",
-                "_blank",
-              )
-            }
-          />
+          <div className="project-card-bottom">
+            <img
+              src={PLAYSTORE_ICON}
+              alt="playstore-icon"
+              className="project-store-icon hover:cursor-pointer hover:opacity-40"
+              onClick={() =>
+                window.open(
+                  "https://play.google.com/store/apps/details?id=com.masqueraderxperience&hl=en_IN&gl=US",
+                  "_blank",
+                )
+              }
+            />
+          </div>
         </div>
 
         {/* Ausa Health */}
         <div className="project-card project-card--dark project-card--wide">
-          <div className="project-carousel-wrapper project-carousel-wrapper--wide">
-            <Carousel data={AUSA_HEALTH_IMAGES} cWidth={"100%"} />
+          <div className="project-card-top">
+            <div className="project-carousel-wrapper project-carousel-wrapper--wide">
+              <Carousel data={AUSA_HEALTH_IMAGES} cWidth={"100%"} />
+            </div>
+            <span className="project-title">Ausa Health</span>
           </div>
-          <span className="project-title">Ausa Health</span>
-          <img
-            src={LINK_ICON}
-            alt="link-icon"
-            className="project-store-icon project-store-icon--link hover:cursor-pointer hover:opacity-40"
-            onClick={() => window.open("https://prar.io/", "_blank")}
-          />
+          <div className="project-card-bottom">
+            <img
+              src={LINK_ICON}
+              alt="link-icon"
+              className="project-store-icon project-store-icon--link hover:cursor-pointer hover:opacity-40"
+              onClick={() => window.open("https://prar.io/", "_blank")}
+            />
+          </div>
         </div>
       </div>
     );
@@ -102,7 +114,7 @@ const Projects = () => {
 
   return (
     <section className="flex textStyle flex-col items-center justify-center gap-10">
-      <div className="flex flex-col textStyle gap-2">
+      <div className="flex flex-col textStyle gap-2 text-center">
         <span className="text-md">Browse My Recent</span>
         <span className="projects-heading text-5xl font-semibold text-[rgb(60,91,111)]">
           Projects

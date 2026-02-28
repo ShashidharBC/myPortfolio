@@ -26,31 +26,61 @@
   border-radius: 0.75rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  gap: 1.25rem;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 0;
   flex: 1 1 220px;
   max-width: 280px;
   min-width: 180px;
   transition: transform 0.2s ease;
+  overflow: hidden;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
 }
 
-.project-card--dark {
-  background: linear-gradient(to bottom, #15385f 85%, #fff 15%);
+/* Top colored section: carousel */
+.project-card-top {
+  width: 100%;
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.project-card--gold {
-  background: linear-gradient(to bottom, #c2a252 85%, #fff 15%);
+.project-card--dark .project-card-top {
+  background-color: #15385f;
+}
+
+.project-card--gold .project-card-top {
+  background-color: #c2a252;
+}
+
+/* Project title sits inside the colored top */
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 0.75rem;
+  text-align: center;
+}
+
+/* Bottom white section: store icon */
+.project-card-bottom {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  flex: 1;
 }
 
 .project-card--wide {
   flex: 1 1 300px;
   max-width: 380px;
-  background: linear-gradient(to bottom, #15385f 80%, #fff 20%);
 }
 
 .project-carousel-wrapper {
@@ -60,13 +90,6 @@
 
 .project-carousel-wrapper--wide {
   padding-left: 0;
-}
-
-.project-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.5rem;
 }
 
 .project-store-icon {
@@ -80,7 +103,7 @@
   height: 44px;
 }
 
-/* Tablet: stack in rows of 2 */
+/* Tablet */
 @media screen and (max-width: 900px) {
   .project-card {
     flex: 1 1 200px;
