@@ -2,7 +2,7 @@ import React from "react";
 import PROFILE_PIC from "../../assests/My_pic-circle-2.png";
 import LINKEDIN from "../../assests/linkedin.png";
 import GITHUB_ICON from "../../assests/github.png";
-import MY_RESUME from "../../assests/ShashidharBC_CV.pdf";
+import MY_RESUME from "../../assests/Shashidhar_18Feb.pdf";
 import "./styles.css";
 import TypeWriter from "./TypeWriter";
 
